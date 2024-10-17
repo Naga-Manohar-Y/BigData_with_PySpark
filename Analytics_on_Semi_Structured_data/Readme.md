@@ -22,4 +22,20 @@ This dataset can support a range of analytics and machine learning applications,
 
 
 ## Anaytics with RDD
+
+In this section, we are conducting an analytics case study on the ArXiv metadata dataset using PySpark's Resilient Distributed Datasets (RDDs). The dataset, which contains metadata for scholarly articles, is analyzed to gain insights into various attributes like titles, abstracts, and publication dates.
+
+We perform the following tasks as part of this case study:
+- **Data Loading and Initialization**: Load the ArXiv metadata JSON file into a PySpark RDD for distributed processing.
+- **Data Exploration**:
+  - Count the number of records and check the partitioning of the RDD.
+  - Retrieve unique attributes, distinct licenses, and the shortest and longest article titles.
+- **Text Processing**:
+  - Extract abbreviations with five or more letters from article abstracts.
+  - Calculate the number of articles published per month based on the 'update_date' attribute.
+  - Compute the average number of pages in articles by analyzing the 'comments' field.
+  
+Through this project, we gain hands-on experience in working with PySpark RDDs, JSON data processing, and building custom functions to extract insights from unstructured text data. The project also demonstrates the use of Spark for scalable data processing, especially valuable for handling large datasets like ArXiv's metadata repository.
+
+
 ## Analytics with DF
