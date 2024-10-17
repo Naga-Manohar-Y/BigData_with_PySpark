@@ -39,3 +39,20 @@ Through this project, we gain hands-on experience in working with PySpark RDDs, 
 
 
 ## Analytics with DF
+
+
+In this section, we perform data analytics on the ArXiv metadata dataset using PySpark DataFrames. The dataset is loaded from a JSON file, enabling scalable and distributed data processing with Spark. Our objective is to explore various aspects of the data and derive meaningful insights through data transformation and querying.
+
+#### Key Tasks:
+- **Data Loading**: Load the ArXiv metadata JSON file into a Spark DataFrame and examine the data schema to understand the structure of the dataset.
+- **Schema Redefinition**: Define a custom schema to streamline the data processing and bind it to the DataFrame for type consistency.
+- **Missing Value Handling**:
+  - Drop rows where the 'comments' attribute is null.
+  - Replace null values in the 'license' attribute with 'unknown.'
+- **SQL Queries**: Register the DataFrame as a temporary view for SQL-based querying to:
+  - Identify authors who have published in the 'math' category.
+  - List distinct licenses for abstracts containing five or more letters.
+- **Statistical Analysis**:
+  - Calculate statistics on the number of pages in articles with unknown licenses by extracting page numbers from the 'comments' field using a custom User-Defined Function (UDF).
+  
+Through this case study, we gain hands-on experience with PySpark DataFrames, JSON data ingestion, handling missing values, and running SQL queries on distributed data. The project demonstrates the power of Spark for processing large datasets and extracting valuable insights efficiently.
